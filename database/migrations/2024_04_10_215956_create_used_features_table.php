@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('used_features', function (Blueprint $table) {
             $table->id();
+            $table->integer('credits');
+            $table->foreignId('feature_id')->constrained('features');
+            $table->foreignId('user_id')->constrained('users');
+            $table->jsonb('data')->nullable();
             $table->timestamps();
         });
     }
