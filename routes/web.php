@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Feature1Controller;
+use App\Http\Controllers\Feature2Controller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/feature1', [Feature1Controller::class, 'index'])->name('feature1.index');
+Route::post('/feature1/calculate', [Feature1Controller::class, 'calculate'])->name('feature1.calculate');
+Route::get('/feature2', [Feature2Controller::class, 'index'])->name('feature2.index');
+Route::post('/feature2/calculate', [Feature2Controller::class, 'calculate'])->name('feature2.calculate');
+require __DIR__ . '/auth.php';
