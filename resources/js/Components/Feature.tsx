@@ -37,10 +37,10 @@ export default function Feature({auth, feature, answer, children}: {
                                     <h3 className={"text-xl font-semibold"}>Insufficient Credits</h3>
                                     <p className={"text-gray-500"}>You need {feature.required_credits} credits to access
                                         this feature.
-                                    Go {" "}
-                                    <Link href={"/"} className={"text-emerald-600 underline"}>
-                                        Buy more Credits
-                                    </Link>
+                                        Go {" "}
+                                        <Link href={route('credit.index')} className={"text-emerald-600 underline"}>
+                                            Buy more Credits
+                                        </Link>
                                     </p>
                                 </div>
 
