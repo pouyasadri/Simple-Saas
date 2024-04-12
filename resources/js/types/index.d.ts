@@ -16,6 +16,21 @@ export interface FeatureType {
     required_credits: number;
 }
 
+export interface PackageType {
+    id: number;
+    name: string;
+    price: number;
+    credits: number;
+}
+
+export interface Features {
+    data: FeatureType[];
+}
+
+export interface Packages {
+    data: PackageType[];
+}
+
 export type PageProps<T extends Record<string, unknown> = Record<string, unknown>> = T & {
     auth: {
         user: User;
