@@ -23,6 +23,18 @@ export interface PackageType {
     credits: number;
 }
 
+export interface UsedFeatureType {
+    id: number;
+    credits: number;
+    feature: FeatureType;
+    created_at: string;
+    data: any;
+}
+
+export interface UsedFeatures {
+    data: UsedFeatureType[];
+}
+
 export interface Features {
     data: FeatureType[];
 }
