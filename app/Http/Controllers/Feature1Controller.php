@@ -63,6 +63,6 @@ class Feature1Controller extends Controller
             'data' => $data,
         ]);
 
-        return to_route('feature2.index')->with('answer', 'The sum of ' . $number1 . ' and ' . $number2 . ' is ' . ($number1 + $number2));
+        return to_route('feature1.index')->with('answer', 'The sum of ' . $number1 . ' and ' . $number2 . ' is ' . ($number1 + $number2));
     }
 }
