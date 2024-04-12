@@ -59,4 +59,15 @@ class User extends Authenticatable
         $this->save();
         return $this;
     }
+    /**
+     * calculate the available credits by increasing it by the given credits
+     * @param int $credits
+     * @return $this
+     */
+    public function increaseCredits(int $credits): self
+    {
+        $this->available_credits += $credits;
+        $this->save();
+        return $this;
+    }
 }
